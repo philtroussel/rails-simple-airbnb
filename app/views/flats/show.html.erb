@@ -7,5 +7,5 @@
 <%= @flat.number_of_guests %>
 <%= @flat.price_per_night %>
 
-<%= link_to 'Edit', edit_flat_path(flat) %>
-<%= link_to 'Delete', flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to 'Edit', edit_flat_path(@flat) %>
+<%= link_to 'Delete', flat_path(@flat), method: :delete, data: { confirm: "Are you sure?" } %>
