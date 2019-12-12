@@ -1,0 +1,13 @@
+<%= link_to 'Add a Flat', new_flat_path %>
+
+<% @flats.each do |flat| %>
+  <%= flat.picture_url %>
+  <h4><%= link_to flat.name, flat_path(flat) %></h4>
+  <p><%= flat.address %></p>
+  <i class="material-icons mr-2">people</i><span><%= flat.number_of_guests %></span>
+  <i class="material-icons mr-2">euro_symbol</i> <%= flat.price_per_night %>
+  <%= link_to 'Edit', edit_flat_path(flat) %>
+  <%= link_to 'Delete', flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+
+
